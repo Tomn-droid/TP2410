@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Ajouter nouvelle Veste</title>
+    <title>Ajouter nouvelle Botte</title>
 </head>
 <body>
 <header>
@@ -60,19 +60,19 @@ echo "hello";?>
     $db = new PDO('mysql:host=localhost;dbname=motoaccess', $user, $pass);
     //Lorsque l'utilisateur a valider son formulaire
     if (isset($_POST['Ajoute'])) {
-        $MarqueCasque = $_POST['MarqueVeste'];
-        $DesignationCasque = $_POST['DesignationVeste'];
-        $MatiereCasque = $_POST['MatiereVeste'];
-        $QuantiteCasque = $_POST['QuantiteVeste'];
+        $MarqueBotte = $_POST['MarqueBotte'];
+        $DesignationBotte = $_POST['DesignationBotte'];
+        $MatiereBotte = $_POST['MatiereBotte'];
+        $QuantiteBotte = $_POST['QuantiteBotte'];
 
-        if (!empty($MarqueVeste) && !empty($DesignationVeste) && !empty($MatiereVeste) && !empty($QuantiteVeste)) {
+        if (!empty($MarqueBotte) && !empty($DesignationBotte) && !empty($MatiereBotte) && !empty($QuantiteBotte)) {
             //Preparation de la requête
-            $requete = $db->prepare('INSERT INTO tabveste(MarqueVeste, DesignationVeste, MatiereVeste, QuantiteVeste ) VALUES (:MarqueVeste, :DesignationVeste, :MatiereVeste, :QuantiteVeste )');
+            $requete = $db->prepare('INSERT INTO tabbottes(MarqueBotte, DesignationBotte, MatiereBotte, QuantiteBotte ) VALUES (:MarqueBotte, :DesignationBotte, :MatiereBotte, :QuantiteBotte )');
             //Lier les parametre nommé, au contenu a insérer dans la table
-            $requete->bindvalue(':MarqueVeste', $MarqueVeste);
-            $requete->bindvalue(':DesignationVeste', $DesignationVeste);
-            $requete->bindvalue(':MatiereVeste', $MatiereVeste);
-            $requete->bindvalue(':QuantiteVeste', $QuantiteVeste);
+            $requete->bindvalue(':MarqueBotte', $MarqueBotte);
+            $requete->bindvalue(':DesignationBotte', $DesignationBotte);
+            $requete->bindvalue(':MatiereBotte', $MatiereBotte);
+            $requete->bindvalue(':QuantiteBotte', $QuantiteBotte);
 
             //Execution
 
@@ -92,28 +92,28 @@ echo "hello";?>
 
 </div>
 
-<h1>AJOUTER UN PRODUIT VESTE</h1>
+<h1>AJOUTER UN PRODUIT BOTTE</h1>
     <div class="Formulaire">
-    <form action="NouvelleVeste.php" method="post">
+    <form action="NouvelleBotte.php" method="post">
  
   <div class="form-group">
     <label for="exampleInputEmail1">Marque</label>
-    <input type="text" class="form-control" id="MarqueVeste" aria-describedby="" placeholder="Marque" name="MarqueVeste">
+    <input type="text" class="form-control" id="MarqueBotte" aria-describedby="" placeholder="Marque" name="MarqueBotte">
     <small id="emailHelp" class="form-text text-muted"></small>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Designation</label>
-    <input type="text" class="form-control" id="DesignationVeste" aria-describedby="" placeholder="Désignation et références" name="DesignationVeste">
+    <input type="text" class="form-control" id="DesignationBotte" aria-describedby="" placeholder="Désignation et références" name="DesignationBotte">
     <small id="emailHelp" class="form-text text-muted"></small>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Matière</label>
-    <input type="text" class="form-control" id="MatiereVeste" aria-describedby="" placeholder="type de matière" name="MatiereVeste">
+    <input type="text" class="form-control" id="MatiereBotte" aria-describedby="" placeholder="type de matière" name="MatiereBotte">
     <small id="emailHelp" class="form-text text-muted"></small>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Quantité reçue</label>
-    <input type="number" class="form-control" id="QuantiteVeste" aria-describedby="" placeholder="Quantité reçue" name="QuantiteVeste">
+    <input type="number" class="form-control" id="QuantiteBotte" aria-describedby="" placeholder="Quantité reçue" name="QuantiteBotte">
     <small id="emailHelp" class="form-text text-muted"></small>
   </div>
  

@@ -1,0 +1,56 @@
+<?php
+$host = 'localhost'; // Remplacez par votre hôte
+$db = 'nom_de_la_base'; // Remplacez par le nom de votre base de données
+$user = 'utilisateur'; // Remplacez par votre nom d'utilisateur
+$pass = 'mot_de_passe'; // Remplacez par votre mot de passe
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo 'Échec de la connexion : ' . $e->getMessage();
+}
+?>
+
+
+<?php
+$sql = "SELECT * FROM votre_table"; // Remplacez par votre requête SQL
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de données</title>
+    <link rel="stylesheet" href="style.css"> <!-- Optionnel pour le style -->
+</head>
+<body>
+
+<table >
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <!-- Ajoutez d'autres en-têtes si nécessaire -->
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($results as $row): ?>
+            <tr>
+                <td><?php echo htmlspecialchars($row['id']); ?></td>
+                <td><?php echo htmlspecialchars($row['nom']); ?></td>
+                <td><?php echo htmlspecialchars($row['email']); ?></td>
+                <!-- Ajoutez d'autres colonnes si nécessaire -->
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+</body>
+</html>
