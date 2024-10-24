@@ -22,21 +22,21 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Accueil</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Casque</a>
+        <a class="nav-link" href="Stockcasque.php">Casque</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">veste</a>
+        <a class="nav-link" href="StockVeste.php">veste</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pantalon</a>
+        <a class="nav-link" href="StockPantalon.php">Pantalon</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Bottes</a>
+        <a class="nav-link" href="StokBotte.php">Bottes</a>
       </li>
      
     </ul>
@@ -48,7 +48,7 @@
   </div>
 </nav>
 <?php
-echo "hello";?>
+echo "Gestion du stock";?>
 </header>
 <div class="Hero">
 
@@ -60,10 +60,10 @@ echo "hello";?>
     $db = new PDO('mysql:host=localhost;dbname=motoaccess', $user, $pass);
     //Lorsque l'utilisateur a valider son formulaire
     if (isset($_POST['Ajoute'])) {
-        $MarqueCasque = $_POST['MarqueVeste'];
-        $DesignationCasque = $_POST['DesignationVeste'];
-        $MatiereCasque = $_POST['MatiereVeste'];
-        $QuantiteCasque = $_POST['QuantiteVeste'];
+        $MarqueVeste = $_POST['MarqueVeste'];
+        $DesignationVeste = $_POST['DesignationVeste'];
+        $MatiereVeste = $_POST['MatiereVeste'];
+        $QuantiteVeste = $_POST['QuantiteVeste'];
 
         if (!empty($MarqueVeste) && !empty($DesignationVeste) && !empty($MatiereVeste) && !empty($QuantiteVeste)) {
             //Preparation de la requête
@@ -140,5 +140,9 @@ echo "hello";?>
 <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
 
+
+<footer>
+
+</footer>
 </body>
 </html>

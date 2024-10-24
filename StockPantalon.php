@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Stock Casque</title>
+    <title>Stock Pantalon</title>
 </head>
 <body>
 <header>
@@ -78,7 +78,7 @@ try {
 
 
 <?php
-$sql = "SELECT * FROM tabcasque"; // Remplacez par votre requête SQL
+$sql = "SELECT * FROM tabpantalon"; // Remplacez par votre requête SQL
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -99,13 +99,10 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach ($results as $row): ?>
             
             <tr>
-                <td><?php echo htmlspecialchars($row['ID']); ?></td>
-                <td><?php echo htmlspecialchars($row['MarqueCasque']); ?></td>
-                <td><?php echo htmlspecialchars($row['DesignationCasque']); ?></td>
-                <td><?php echo htmlspecialchars($row['MatiereCasque']); ?></td>
-                <td><?php echo htmlspecialchars($row['QuantiteCasque']); ?></td>
-                
-                
+               
+                <td><?php echo htmlspecialchars($row['DesignationPantalon']); ?></td>
+                <td><?php echo htmlspecialchars($row['MatierePantalon']); ?></td>
+                <td><?php echo htmlspecialchars($row['QuantitePantalon']); ?></td>
                 <!-- Ajoutez d'autres colonnes si nécessaire -->
             </tr>
        
@@ -148,11 +145,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </table>
 </div>
         -->
-<div class="Nvx" ><a href="NouveauxCasque.php"><button>AJouter nouveau</a></button></div>
-
-<footer>
-
-</footer>
+<div class="Nvx" ><a href="NouveauxPantalon.php"><button>AJouter nouveau</a></button></div>
 <!--Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 

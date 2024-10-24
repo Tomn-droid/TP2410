@@ -31,16 +31,16 @@ une page d'accueil : avec lien vers les catégories Casque, veste, pantalon, bot
         <a class="nav-link" href="index.php">Accueil</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Casque</a>
+        <a class="nav-link" href="Stockcasque.php">Casque</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">veste</a>
+        <a class="nav-link" href="StockVeste.php">veste</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pantalon</a>
+        <a class="nav-link" href="StockPantalon.php">Pantalon</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Bottes</a>
+        <a class="nav-link" href="StokBotte.php">Bottes</a>
       </li>
      
     </ul>
@@ -56,53 +56,43 @@ une page d'accueil : avec lien vers les catégories Casque, veste, pantalon, bot
     <div class="Hero">
 
     </div>
+    <div class="Recherche">
+
+    <label for="site-search">Recherche:</label>
+   <input type="search" id="site-search" name="q" />
+
+   <button>Rechercher</button>
+
+  </div>
+  <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+    </div>
     <div class="Categories">
-        <div class="Cat"></div>
-        <div class="Cat"></div>
-        <div class="Cat"></div>
-        <div class="Cat"></div>
+        <div  id="casqueimg" class="Cat">CASQUE</div>
+        <div  id="vesteimg" class="Cat">VESTE</div>
+        <div id="pantimg"  class="Cat">PANTALON</div>
+        <div  id="bottesimg" class="Cat">BOTTES</div>
     </div>
 
     <footer>
 
     </footer>
+    <script>
+import { Input, Ripple, initMDB } from "mdb-ui-kit";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+initMDB({ Input, Ripple });
+</script>
 <!--Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 
 <!--DatatTable-->
 <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
+
 
 </body>
 </html>

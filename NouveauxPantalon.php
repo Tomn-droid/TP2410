@@ -92,7 +92,7 @@ echo "hello";?>
 
 </div>
 
-<h1>AJOUTER UN PRODUIT BOTTE</h1>
+<h1>AJOUTER UN PRODUIT PANTALON</h1>
     <div class="Formulaire">
     <form action="NouveauxPantalon.php" method="post">
  

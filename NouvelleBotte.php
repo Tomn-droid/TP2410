@@ -22,21 +22,21 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Accueil</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Casque</a>
+        <a class="nav-link" href="Stockcasque.php">Casque</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">veste</a>
+        <a class="nav-link" href="StockVeste.php">veste</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pantalon</a>
+        <a class="nav-link" href="StockPantalon.php">Pantalon</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Bottes</a>
+        <a class="nav-link" href="StokBotte.php">Bottes</a>
       </li>
      
     </ul>
@@ -131,7 +131,9 @@ echo "hello";?>
         echo 'Pas de connexion avec la base de donnée';
     ?>
 
+<footer>
 
+</footer>
 
 <!--Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
@@ -141,4 +143,5 @@ echo "hello";?>
 <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
 
 </body>
+
 </html>

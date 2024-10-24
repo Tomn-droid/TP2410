@@ -22,21 +22,21 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Accueil</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Casque</a>
+        <a class="nav-link" href="Stockcasque.php">Casque</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">veste</a>
+        <a class="nav-link" href="StockVeste.php">veste</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pantalon</a>
+        <a class="nav-link" href="StockPantalon.php">Pantalon</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Bottes</a>
+        <a class="nav-link" href="StokBotte.php">Bottes</a>
       </li>
      
     </ul>
@@ -97,8 +97,10 @@ echo $QuantiteCasque;
     }
 
     ?>
-<h1>AJOUTER UN PRODUIT CASQUE</h1>
+
 </div>
+
+<h1>AJOUTER UN PRODUIT CASQUE</h1>
     <div class="Formulaire">
     <form action="NouveauxCasque.php" method="post">
  

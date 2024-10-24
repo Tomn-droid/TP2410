@@ -48,8 +48,8 @@ h1{
 /*Accueil*/
 .Cat{
     width: 20%;
-    height: 100px;
-    background-color: brown;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
     margin: 32px 32px;
 }
 .Hero{
@@ -72,4 +72,51 @@ a{
     display: block;
     color: aliceblue;
     text-decoration: none;
+}
+.Categories{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+/*footer*/
+
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(68, 59, 59);
+}
+#casqueimg{
+background-image: url("casque.jfif");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+
+}
+#vesteimg{
+background-image: url("veste.jpg");
+background-size: cover;
+}
+#pantimg{
+background-image: url("pantalon.webp");
+background-size: cover;
+}
+#bottesimg{
+background-image: url("botte.webp");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+.Categories a{
+    display: block;
+}
+.Recherche{
+    width: 50%;
+    margin: 64px auto;
+}
+input{
+    border-radius: 12px;
+    padding: 8px;
+}
+td{
+    margin: 16px;
 }
