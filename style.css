@@ -1,0 +1,72 @@
+.Formulaire{
+    width: 50%;
+    margin: 64px auto;
+    padding: 32px;
+    background-color: rgb(53, 54, 65);
+    color: aliceblue;
+}
+.Hero{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(53, 54, 65);
+}
+.Formulaire #btn{
+margin-top: 16px;
+background-color: rgb(56, 96, 114);
+color: aliceblue;
+}
+.Tableau{
+    width: 50%;
+    margin: 64px auto;
+    padding: 32px;
+    background-color: rgb(53, 54, 65);
+    color: aliceblue;
+}
+h1{
+    color: rgb(74, 122, 165);
+    text-align: center;
+}
+.TableRecup{
+    width: 50%;
+    margin: 64px auto;
+    padding: 32px;
+    background-color: rgb(53, 54, 65);
+    color: aliceblue;
+}
+.Tabaff{
+    width: 50%;
+    margin: 64px auto;
+    padding: 32px;
+    background-color: rgb(53, 54, 65);
+    color: aliceblue;
+
+}
+
+/*Accueil*/
+.Cat{
+    width: 20%;
+    height: 100px;
+    background-color: brown;
+    margin: 32px 32px;
+}
+.Hero{
+    background-image: url("hero.jpg");
+    background-size: cover;
+}
+.Nvx button{
+    padding: 12px;
+    background-color: rgb(91, 143, 143);
+    color: aliceblue;
+    border-radius: 16px;
+    border: none;
+    
+}
+.Nvx{
+    width: 20%;
+    margin: 32px auto;
+}
+a{
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+}
